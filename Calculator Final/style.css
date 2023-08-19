@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, aliceblue, pink)
+}
+
+ .container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px black;
+}
+
+.theme-toggler {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.theme-toggler.active {
+    background-color: black;
+}
+
+.theme-toggler.active::before{
+    background-color: white;
+}
+
+.theme-toggler::before {
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: lightpink;
+    z-index: -1;
+}
+
+button {
+    border:0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    height: 130px;
+}
+
+input[type="text"] {
+    height: 60px;
+    width: 280px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    margin-top: 50px;
+    border: 3px solid silver;
+    text-align: right;
+}
+
+/* light theme */
+
+.calculator {
+    background-color: white;
+}
+
+.calculator #display {
+    color: black
+}
+
+.calculator button#clear {
+    background-color: lightblue;
+    color: red;
+}
+
+.calculator button.btn-number {
+    background-color: lightsalmon;
+    color: black;
+}
+
+.calculator button.btn-operator {
+    background-color: lightpink;
+    color: black;
+}
+
+.calculator button.btn-equal {
+    background-color: lightskyblue;
+    color: black;
+}
+
+/* dark theme */
+
+.calculator.dark {
+    background-color: black;
+}
+
+.calculator.dark #display {
+    color: whitesmoke
+}
+
+.calculator.dark button#clear {
+    background-color: darkslategrey;
+    color: yellow;
+}
+
+.calculator.dark button.btn-number {
+    background-color: darkslategrey;
+    color: whitesmoke;
+}
+
+.calculator.dark button.btn-operator {
+    background-color: darkslategrey;
+    color: whitesmoke;
+}
+
+.calculator.dark button.btn-equal {
+    background-color: darkslategrey;
+    color: whitesmoke;
+}
